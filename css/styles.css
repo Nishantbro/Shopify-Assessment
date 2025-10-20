@@ -1,0 +1,817 @@
+/* css/styles.css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f9f9f9;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header */
+.header {
+    background: white;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    padding: 1rem 0;
+    margin-bottom: 2rem;
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header h1 {
+    color: #333;
+    font-size: 1.5rem;
+}
+
+.header nav a {
+    margin-left: 1.5rem;
+    text-decoration: none;
+    color: #666;
+}
+
+.header nav a:hover {
+    color: #333;
+}
+
+/* Main Product Layout */
+.main-container {
+    padding-bottom: 3rem;
+}
+
+.product-page {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.product-gallery {
+    flex: 1;
+    min-width: 300px;
+}
+
+.product-details {
+    flex: 1;
+    min-width: 300px;
+}
+
+/* Product Gallery */
+.main-image-container {
+    position: relative;
+    width: 100%;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    cursor: zoom-in;
+}
+
+#main-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.image-zoom {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.3);
+    pointer-events: none;
+    opacity: 0;
+    transform: scale(0);
+    transition: opacity 0.3s, transform 0.3s;
+}
+
+.main-image-container:hover .image-zoom {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.thumbnail-strip {
+    width: 100%;
+    overflow-x: auto;
+    padding: 0.5rem 0;
+}
+
+.thumbnails-container {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.thumbnail {
+    flex: 0 0 auto;
+    width: 80px;
+    height: 80px;
+    border-radius: 4px;
+    overflow: hidden;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: all 0.2s ease;
+    opacity: 0.7;
+}
+
+.thumbnail.active {
+    border-color: #333;
+    opacity: 1;
+}
+
+.thumbnail:hover {
+    opacity: 1;
+}
+
+.thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Product Details */
+.product-header h1 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    color: #222;
+}
+
+.price {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #e44d26;
+    margin-bottom: 0.5rem;
+}
+
+.rating {
+    color: #666;
+    margin-bottom: 1.5rem;
+}
+
+/* Product Variants */
+.variant-option {
+    margin-bottom: 1.5rem;
+}
+
+.variant-option label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.color-swatches {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.swatch {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    padding: 0.5rem;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+}
+
+.swatch.active {
+    background-color: #f0f0f0;
+    box-shadow: 0 0 0 2px #333;
+}
+
+.swatch-color {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-bottom: 0.25rem;
+    border: 1px solid #ddd;
+}
+
+.swatch-color.black { background-color: #333; }
+.swatch-color.silver { background-color: #c0c0c0; }
+.swatch-color.gold { background-color: #ffd700; }
+.swatch-color.blue { background-color: #007bff; }
+
+.swatch-label {
+    font-size: 0.8rem;
+}
+
+.compare-colors-btn {
+    background: none;
+    border: 1px solid #ddd;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: all 0.2s ease;
+}
+
+.compare-colors-btn:hover {
+    background: #f5f5f5;
+}
+
+.size-select {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+}
+
+.size-chart-btn {
+    background: none;
+    border: none;
+    color: #666;
+    text-decoration: underline;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+
+.size-chart-btn:hover {
+    color: #333;
+}
+
+.selected-variant {
+    padding: 1rem;
+    background: #f5f5f5;
+    border-radius: 4px;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+}
+
+/* Add to Cart Section */
+.add-to-cart-section {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.quantity-selector {
+    display: flex;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.quantity-btn {
+    background: #f5f5f5;
+    border: none;
+    padding: 0.75rem 1rem;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.quantity-input {
+    width: 60px;
+    border: none;
+    text-align: center;
+    font-size: 1rem;
+}
+
+.add-to-cart-btn {
+    flex: 1;
+    background: #333;
+    color: white;
+    border: none;
+    padding: 0.75rem 2rem;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s ease;
+    min-width: 200px;
+}
+
+.add-to-cart-btn:hover {
+    background: #555;
+}
+
+/* Product Features */
+.product-features {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.feature {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #666;
+}
+
+/* Product Bundle */
+.product-bundle {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    margin-bottom: 3rem;
+}
+
+.product-bundle h2 {
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.bundle-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.bundle-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    background: #f9f9f9;
+    border-radius: 8px;
+}
+
+.bundle-item img {
+    width: 60px;
+    height: 60px;
+    border-radius: 4px;
+    object-fit: cover;
+}
+
+.bundle-plus {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #666;
+}
+
+.bundle-total {
+    text-align: center;
+}
+
+.total-price {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.savings {
+    color: #e44d26;
+    margin-bottom: 1rem;
+}
+
+.add-bundle-btn {
+    background: #e44d26;
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.add-bundle-btn:hover {
+    background: #d43c15;
+}
+
+/* Product Tabs */
+.product-tabs {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    margin-bottom: 3rem;
+    overflow: hidden;
+}
+
+.tabs-header {
+    display: flex;
+    border-bottom: 1px solid #eee;
+}
+
+.tab-btn {
+    flex: 1;
+    background: none;
+    border: none;
+    padding: 1rem;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: all 0.2s ease;
+}
+
+.tab-btn.active {
+    background: #333;
+    color: white;
+}
+
+.tab-btn:hover:not(.active) {
+    background: #f5f5f5;
+}
+
+.tabs-content {
+    padding: 2rem;
+}
+
+.tab-panel {
+    display: none;
+}
+
+.tab-panel.active {
+    display: block;
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.tab-panel h3 {
+    margin-bottom: 1rem;
+}
+
+.tab-panel ul {
+    margin-left: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.tab-panel table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.tab-panel td {
+    padding: 0.5rem;
+    border-bottom: 1px solid #eee;
+}
+
+/* Pair Well With & Related Products */
+.pair-with-section,
+.related-products {
+    margin-bottom: 3rem;
+}
+
+.pair-with-section h2,
+.related-products h2 {
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.pair-with-container {
+    display: flex;
+    gap: 1rem;
+    overflow-x: auto;
+    padding: 1rem 0;
+    scrollbar-width: thin;
+}
+
+.related-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.product-card {
+    background: white;
+    border-radius: 8px;
+    padding: 1rem;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    text-align: center;
+    position: relative;
+    min-width: 200px;
+}
+
+.product-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+}
+
+.badge {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+.badge.new {
+    background: #007bff;
+    color: white;
+}
+
+.badge.popular {
+    background: #e44d26;
+    color: white;
+}
+
+.product-card h3 {
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+}
+
+.product-card .price {
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+}
+
+.add-to-cart-small {
+    width: 100%;
+    background: #333;
+    color: white;
+    border: none;
+    padding: 0.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.add-to-cart-small:hover {
+    background: #555;
+}
+
+/* Modal Styles */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+
+.modal.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+.modal-content {
+    background: white;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 500px;
+    max-height: 90vh;
+    overflow-y: auto;
+    position: relative;
+    z-index: 1001;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem;
+    border-bottom: 1px solid #eee;
+}
+
+.modal-header h2 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.modal-close {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #666;
+}
+
+.modal-close:hover {
+    color: #333;
+}
+
+.modal-body {
+    padding: 1.5rem;
+}
+
+/* Size Chart Table */
+.size-chart-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 1.5rem;
+}
+
+.size-chart-table th,
+.size-chart-table td {
+    padding: 0.75rem;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+}
+
+.size-chart-table th {
+    background-color: #f5f5f5;
+    font-weight: bold;
+}
+
+.measurement-guide h3 {
+    margin-bottom: 0.5rem;
+}
+
+/* Compare Colors */
+.compare-colors-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.compare-color-option {
+    text-align: center;
+}
+
+.compare-swatch {
+    padding: 1rem;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.compare-swatch.active {
+    border-color: #333;
+    background: #f5f5f5;
+}
+
+.compare-swatch-color {
+    display: block;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin: 0 auto 0.5rem;
+    border: 1px solid #ddd;
+}
+
+.compare-swatch-label {
+    font-weight: bold;
+}
+
+.compare-selected h3 {
+    margin-bottom: 0.5rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .product-page {
+        flex-direction: column;
+    }
+    
+    .add-to-cart-section {
+        flex-direction: column;
+    }
+    
+    .add-to-cart-btn {
+        min-width: auto;
+    }
+    
+    .bundle-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .bundle-plus {
+        transform: rotate(90deg);
+    }
+    
+    .tabs-header {
+        flex-direction: column;
+    }
+    
+    .pair-with-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .related-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 0 10px;
+    }
+
+    .product-header h1 {
+        font-size: 1.5rem;
+    }
+
+    .price {
+        font-size: 1.25rem;
+    }
+
+    .color-swatches {
+        justify-content: center;
+    }
+
+    .related-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .modal-content {
+        width: 95%;
+        margin: 1rem;
+    }
+}
+
+/* Add these to your existing CSS */
+
+/* 1. Scrollbar for Thumbnails */
+.thumbnail-strip {
+    scrollbar-width: thin;
+    scrollbar-color: #888 #f1f1f1;
+}
+
+.thumbnail-strip::-webkit-scrollbar {
+    height: 6px;
+}
+
+.thumbnail-strip::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.thumbnail-strip::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 3px;
+}
+
+/* 2. Focus States */
+button:focus,
+.swatch:focus,
+.size-select:focus {
+    outline: 2px solid #007bff;
+    outline-offset: 2px;
+}
+
+/* 3. Modal Content Animation */
+.modal.active .modal-content {
+    animation: slideUp 0.3s ease;
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* 4. Disabled Button State */
+.add-to-cart-btn:disabled,
+.add-bundle-btn:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+/* 5. Image Loading Placeholder */
+.main-image-container::before {
+    content: '';
+    display: block;
+    padding-top: 100%;
+    background: #f0f0f0;
+}
+
+#main-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
