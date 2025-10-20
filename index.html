@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium Watch Collection | Shopify Store</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <h1>WatchStore</h1>
+            <nav>
+                <a href="#">Home</a>
+                <a href="#">Shop</a>
+                <a href="#">Collections</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Product Section -->
+    <main class="container main-container">
+        <div class="product-page">
+            <!-- Product Gallery Section -->
+            <section class="product-gallery">
+                <div class="main-image-container">
+                    <img id="main-image" src="assets/Premium Watch-Black.jpg" alt="Premium Watch - Black">
+                    <div class="image-zoom"></div>
+                </div>
+
+                <div class="thumbnail-strip">
+                    <div class="thumbnails-container">
+                        <div class="thumbnail active" data-image="assets/Main-Image-1.jpg" data-alt="Black Watch Front">
+                            <img src="assets/Main-Image-1.jpg" alt="Thumbnail 1">
+                        </div>
+                        <div class="thumbnail" data-image="assets/Main-Image-2.jpg" data-alt="Black Watch Side">
+                            <img src="assets/Main-Image-2.jpg" alt="Thumbnail 2">
+                        </div>
+                        <div class="thumbnail" data-image="assets/Main-Image-3.jpg" data-alt="Black Watch Back">
+                            <img src="assets/Main-Image-3.jpg" alt="Thumbnail 3">
+                        </div>
+                        <div class="thumbnail" data-image="assets/Main-Image-4.jpg" data-alt="Black Watch Wrist">
+                            <img src="assets/Main-Image-4.jpg" alt="Thumbnail 4">
+                        </div>
+                        <div class="thumbnail" data-image="assets/Main-Image-5.jpg" data-alt="Black Watch Box">
+                            <img src="assets/Main-Image-5.jpg" alt="Thumbnail 5">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Product Details Section -->
+            <section class="product-details">
+                <div class="product-header">
+                    <h1>Classic Chronograph Watch</h1>
+                    <div class="price">$299.99</div>
+                    <div class="rating">
+                        ⭐⭐⭐⭐⭐ (128 reviews)
+                    </div>
+                </div>
+
+                <!-- Product Variants -->
+                <div class="product-variants">
+                    <!-- Color Variants -->
+                    <div class="variant-option">
+                        <label>Color:</label>
+                        <div class="color-swatches">
+                            <div class="swatch active" data-color="black" data-image="assets/black watch.jpg">
+                                <span class="swatch-color black"></span>
+                                <span class="swatch-label">Black</span>
+                            </div>
+                            <div class="swatch" data-color="silver" data-image="assets/silver-watch.jpg">
+                                <span class="swatch-color silver"></span>
+                                <span class="swatch-label">Silver</span>
+                            </div>
+                            <div class="swatch" data-color="gold" data-image="assets/gold watch.jpg">
+                                <span class="swatch-color gold"></span>
+                                <span class="swatch-label">Gold</span>
+                            </div>
+                            <div class="swatch" data-color="blue" data-image="assets/bluewatch.jpg">
+                                <span class="swatch-color blue"></span>
+                                <span class="swatch-label">Blue</span>
+                            </div>
+                        </div>
+                        <button class="compare-colors-btn" id="compare-colors-btn">Compare Colors</button>
+                    </div>
+
+                    <!-- Size Variants -->
+                    <div class="variant-option">
+                        <label for="size-select">Size:</label>
+                        <select id="size-select" class="size-select">
+                            <option value="">Select Size</option>
+                            <option value="38mm">38mm</option>
+                            <option value="40mm">40mm</option>
+                            <option value="42mm">42mm</option>
+                        </select>
+                        <button class="size-chart-btn" id="size-chart-btn">Size Guide</button>
+                    </div>
+
+                    <!-- Selected Variant Display -->
+                    <div class="selected-variant">
+                        Selected: <span id="selected-color">Black</span> | <span id="selected-size">-</span>
+                    </div>
+                </div>
+
+                <!-- Add to Cart -->
+                <div class="add-to-cart-section">
+                    <div class="quantity-selector">
+                        <button class="quantity-btn minus">-</button>
+                        <input type="number" class="quantity-input" value="1" min="1">
+                        <button class="quantity-btn plus">+</button>
+                    </div>
+                    <button class="add-to-cart-btn">Add to Cart</button>
+                </div>
+
+                <!-- Product Features -->
+                <div class="product-features">
+                    <div class="feature">
+                        <span>✓</span> Free Shipping & Returns
+                    </div>
+                    <div class="feature">
+                        <span>✓</span> 2-Year Warranty
+                    </div>
+                    <div class="feature">
+                        <span>✓</span> 30-Day Money Back
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Product Bundle Section -->
+        <section class="product-bundle">
+            <h2>Complete Your Look</h2>
+            <div class="bundle-container">
+                <div class="bundle-item">
+                    <img src="assets/Leather-Strap.jpg" alt="Leather Strap">
+                    <div class="bundle-details">
+                        <h3>Leather Strap</h3>
+                        <div class="price">$49.99</div>
+                    </div>
+                </div>
+                <div class="bundle-plus">+</div>
+                <div class="bundle-item">
+                    <img src="assets/Cleaning-kit.jpg" alt="Cleaning Kit">
+                    <div class="bundle-details">
+                        <h3>Cleaning Kit</h3>
+                        <div class="price">$24.99</div>
+                    </div>
+                </div>
+                <div class="bundle-total">
+                    <div class="total-price">Bundle Total: $374.97</div>
+                    <div class="savings">You save $25.00</div>
+                    <button class="add-bundle-btn">Add Bundle to Cart</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Product Tabs Section -->
+        <section class="product-tabs">
+            <div class="tabs-header">
+                <button class="tab-btn active" data-tab="description">Description</button>
+                <button class="tab-btn" data-tab="information">Product Information</button>
+                <button class="tab-btn" data-tab="shipping">Shipping Details</button>
+            </div>
+            <div class="tabs-content">
+                <div class="tab-panel active" id="description">
+                    <h3>Premium Chronograph Watch</h3>
+                    <p>Our classic chronograph watch combines timeless design with modern functionality. Featuring a
+                        stainless steel case, genuine leather strap, and precision movement.</p>
+                    <ul>
+                        <li>Stainless steel 42mm case</li>
+                        <li>Genuine leather strap</li>
+                        <li>Water resistant to 50m</li>
+                        <li>Swiss quartz movement</li>
+                        <li>2-year international warranty</li>
+                    </ul>
+                </div>
+                <div class="tab-panel" id="information">
+                    <h3>Technical Specifications</h3>
+                    <table>
+                        <tr>
+                            <td>Movement</td>
+                            <td>Swiss Ronda 762</td>
+                        </tr>
+                        <tr>
+                            <td>Case Material</td>
+                            <td>316L Stainless Steel</td>
+                        </tr>
+                        <tr>
+                            <td>Crystal</td>
+                            <td>Scratch-resistant Sapphire</td>
+                        </tr>
+                        <tr>
+                            <td>Water Resistance</td>
+                            <td>5 ATM (50 meters)</td>
+                        </tr>
+                        <tr>
+                            <td>Strap</td>
+                            <td>Genuine Leather</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="tab-panel" id="shipping">
+                    <h3>Shipping & Returns</h3>
+                    <p>Free standard shipping on all orders. Express shipping available at checkout.</p>
+                    <ul>
+                        <li>Standard Shipping: 3-5 business days</li>
+                        <li>Express Shipping: 1-2 business days</li>
+                        <li>Free returns within 30 days</li>
+                        <li>International shipping available</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pair Well With Section -->
+        <section class="pair-with-section">
+            <h2>Pair Well With</h2>
+            <div class="pair-with-container">
+                <div class="product-card">
+                    <span class="badge new">New</span>
+                    <img src="assets/Leather-Strap.jpg" alt="Leather Strap">
+                    <h3>Leather Strap</h3>
+                    <div class="price">$49.99</div>
+                    <button class="add-to-cart-small">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <span class="badge popular">Popular</span>
+                    <img src="assets/watch-box.jpg" alt="Watch Box">
+                    <h3>Watch Box</h3>
+                    <div class="price">$79.99</div>
+                    <button class="add-to-cart-small">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="assets/Cleaning-kit.jpg" alt="Cleaning Kit">
+                    <h3>Cleaning Kit</h3>
+                    <div class="price">$24.99</div>
+                    <button class="add-to-cart-small">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <span class="badge new">New</span>
+                    <img src="assets/travel-case.jpg" alt="Travel Case">
+                    <h3>Travel Case</h3>
+                    <div class="price">$34.99</div>
+                    <button class="add-to-cart-small">Add to Cart</button>
+                </div>
+                <!-- 🆕 ADDED 3 MORE PRODUCTS FOR HORIZONTAL SCROLL -->
+                <div class="product-card">
+                    <span class="badge popular">Popular</span>
+                    <img src="assets/watch-winder.jpg" alt="Watch Winder">
+                    <h3>Watch Winder</h3>
+                    <div class="price">$89.99</div>
+                    <button class="add-to-cart-small">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="assets/metal-bracelet.jpg" alt="Metal Bracelet">
+                    <h3>Metal Bracelet</h3>
+                    <div class="price">$59.99</div>
+                    <button class="add-to-cart-small">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <span class="badge new">New</span>
+                    <img src="assets/watch-tools-kit.jpg" alt="Watch Tools Kit">
+                    <h3>Watch Tools Kit</h3>
+                    <div class="price">$29.99</div>
+                    <button class="add-to-cart-small">Add to Cart</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Related Products Section -->
+        <section class="related-products">
+            <h2>You Might Also Like</h2>
+            <div class="related-grid">
+                <div class="product-card">
+                    <span class="badge new">New</span>
+                    <img src="assets/sport-watch.jpg" alt="Sport Watch">
+                    <h3>Sport Watch</h3>
+                    <div class="price">$199.99</div>
+                    <button class="add-to-cart-small">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="assets/driver-watch.jpg" alt="Diver Watch">
+                    <h3>Diver Watch</h3>
+                    <div class="price">$349.99</div>
+                    <button class="add-to-cart-small">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <span class="badge popular">Popular</span>
+                    <img src="assets/minimalist-watch.jpg" alt="Minimalist Watch">
+                    <h3>Minimalist Watch</h3>
+                    <div class="price">$159.99</div>
+                    <button class="add-to-cart-small">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="assets/Smart-watch.jpg" alt="Smart Watch">
+                    <h3>Smart Watch</h3>
+                    <div class="price">$299.99</div>
+                    <button class="add-to-cart-small">Add to Cart</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Size Chart Modal -->
+    <div id="size-chart-modal" class="modal" aria-hidden="true">
+        <div class="modal-overlay" tabindex="-1" data-modal-close>
+            <div class="modal-content" role="dialog" aria-labelledby="modal-title">
+                <div class="modal-header">
+                    <h2 id="modal-title">Watch Size Guide</h2>
+                    <button class="modal-close" aria-label="Close modal" data-modal-close>&times;</button>
+                </div>
+                <div class="modal-body">
+                    <table class="size-chart-table">
+                        <thead>
+                            <tr>
+                                <th>Case Size</th>
+                                <th>Wrist Size</th>
+                                <th>Band Width</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>38mm</td>
+                                <td>5.5 - 6.5 inches</td>
+                                <td>18mm</td>
+                            </tr>
+                            <tr>
+                                <td>40mm</td>
+                                <td>6.5 - 7.5 inches</td>
+                                <td>20mm</td>
+                            </tr>
+                            <tr>
+                                <td>42mm</td>
+                                <td>7.5+ inches</td>
+                                <td>22mm</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="measurement-guide">
+                        <h3>How to Measure Your Wrist</h3>
+                        <p>Use a soft measuring tape to measure around your wrist where you normally wear your watch. If
+                            you don't have a measuring tape, use a string and measure it against a ruler.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Compare Colors Modal -->
+    <div id="compare-colors-modal" class="modal" aria-hidden="true">
+        <div class="modal-overlay" tabindex="-1" data-modal-close>
+            <div class="modal-content" role="dialog" aria-labelledby="compare-modal-title">
+                <div class="modal-header">
+                    <h2 id="compare-modal-title">Compare Colors</h2>
+                    <button class="modal-close" aria-label="Close modal" data-modal-close>&times;</button>
+                </div>
+                <div class="modal-body">
+                    <div class="compare-colors-container">
+                        <div class="compare-color-option">
+                            <div class="compare-swatch active" data-color="black">
+                                <span class="compare-swatch-color black"></span>
+                                <span class="compare-swatch-label">Black</span>
+                            </div>
+                        </div>
+                        <div class="compare-color-option">
+                            <div class="compare-swatch" data-color="silver">
+                                <span class="compare-swatch-color silver"></span>
+                                <span class="compare-swatch-label">Silver</span>
+                            </div>
+                        </div>
+                        <div class="compare-color-option">
+                            <div class="compare-swatch" data-color="gold">
+                                <span class="compare-swatch-color gold"></span>
+                                <span class="compare-swatch-label">Gold</span>
+                            </div>
+                        </div>
+                        <div class="compare-color-option">
+                            <div class="compare-swatch" data-color="blue">
+                                <span class="compare-swatch-color blue"></span>
+                                <span class="compare-swatch-label">Blue</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="compare-selected">
+                        <h3>Selected Colors:</h3>
+                        <div id="selected-colors-list"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/scripts.js"></script>
+</body>
+
+</html>
